@@ -1,0 +1,15 @@
+{
+    "name": "PayuMoney Payments Gateway",
+    "description": "PayuMoney Payments Gateway in PHP for Custom Payments",
+    "repository": "https://github.com/ParveenBhadooOfficial/PayuMoneyPaymentsGatewayPHP",
+    "logo": "https://raw.githubusercontent.com/ParveenBhadooOfficial/PayuMoneyPaymentsGatewayPHP/master/pay/payu.png",
+    "keywords": ["php","payu"],
+    "env": {
+        "Merchant_Salt": {
+            "description": "Payu Merchant's SALT"
+        },
+        "Merchant_Key": {
+            "description": "Payu Merchant's API Secret KEY"
+        }
+    }
+}
