@@ -110,12 +110,12 @@ include("config.php");
                         <input type="hidden" name="key" value="<?php echo $MERCHANT_KEY ?>" />
                         <input type="hidden" name="hash" value="<?php echo $hash ?>"/>
                         <input type="hidden" name="txnid" value="<?php echo $txnid ?>" />
-                        <input class="input100" name="amount" value="<?php echo (empty($posted['amount'])) ? '' : $posted['amount'] ?>" placeholder="Amount" required>
+                        <input class="input100" name="amount" value="<?php echo (empty($posted['amount'])) ? '' : $posted['amount'] ?>" placeholder="Amount" maxlength="5" oninput="this.value=this.value.replace(/[^0-9]/g,'');" required>
                 </div>
                 
                 <div class="wrap-input100">
                     <span class="label-input100">FIRST NAME</span>
-                    <input class="input100" name="firstname" value="<?php echo (empty($posted['firstname'])) ? '' : $posted['firstname']; ?>" placeholder="First Name" required>
+                    <input class="input100" name="firstname" value="<?php echo (empty($posted['firstname'])) ? '' : $posted['firstname']; ?>" placeholder="First Name" maxlength="20" oninput="this.value=this.value.replace(/^[A-Za-z]+$/);" required>
                 </div>
 
                 <div class="wrap-input100">
