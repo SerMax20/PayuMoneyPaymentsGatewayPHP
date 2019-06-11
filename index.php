@@ -47,6 +47,36 @@ include("config.php");
                 message.style.color = badColor;
                 message.innerHTML = "Invalid Mobile Number, 10 Digit Number Required."
             }
+            elseif(mobile.value.startsWith("0")){
+                mobile.style.backgroundColor = badColor;
+                message.style.color = badColor;
+                message.innerHTML = "Invalid Mobile Number, 10 Digit Number Required."
+            }
+            elseif(mobile.value.startsWith("1")){
+                mobile.style.backgroundColor = badColor;
+                message.style.color = badColor;
+                message.innerHTML = "Invalid Mobile Number, 10 Digit Number Required."
+            }
+            elseif(mobile.value.startsWith("2")){
+                mobile.style.backgroundColor = badColor;
+                message.style.color = badColor;
+                message.innerHTML = "Invalid Mobile Number, 10 Digit Number Required."
+            }
+            elseif(mobile.value.startsWith("3")){
+                mobile.style.backgroundColor = badColor;
+                message.style.color = badColor;
+                message.innerHTML = "Invalid Mobile Number, 10 Digit Number Required."
+            }
+            elseif(mobile.value.startsWith("4")){
+                mobile.style.backgroundColor = badColor;
+                message.style.color = badColor;
+                message.innerHTML = "Invalid Mobile Number, 10 Digit Number Required."
+            }
+            elseif(mobile.value.startsWith("5")){
+                mobile.style.backgroundColor = badColor;
+                message.style.color = badColor;
+                message.innerHTML = "Invalid Mobile Number, 10 Digit Number Required."
+            }
             else{
                 mobile.style.backgroundColor = goodColor;
                 message.style.color = goodColor;
