@@ -115,7 +115,7 @@ include("config.php");
                 
                 <div class="wrap-input100">
                     <span class="label-input100">FIRST NAME</span>
-                    <input class="input100" name="firstname" value="<?php echo (empty($posted['firstname'])) ? '' : $posted['firstname']; ?>" placeholder="First Name" maxlength="20" oninput="this.value=this.value.replace([A-Za-z\\s]*);" required>
+                    <input class="input100" name="firstname" value="<?php echo (empty($posted['firstname'])) ? '' : $posted['firstname']; ?>" placeholder="First Name" maxlength="20" oninput="this.value=this.value.replace(/^[a-zA-Z]*$/g);" required>
                 </div>
 
                 <div class="wrap-input100">
