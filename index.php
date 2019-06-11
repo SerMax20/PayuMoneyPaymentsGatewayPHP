@@ -20,6 +20,7 @@ include("config.php");
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ParveenBhadooOfficial/BhadooJS@1.0.12/vendor/select2/select2.min.css" integrity="sha256-xJOZHfpxLR/uhh1BwYFS5fhmOAdIRQaiOul5F/b7v3s=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ParveenBhadooOfficial/BhadooJS@1.0.12/css/util.css" integrity="sha256-g3SU8rSj3nvOuH156EGuSLlvgQgqJCGFjgax1dHhF/g=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ParveenBhadooOfficial/BhadooJS@1.0.12/css/main.css" integrity="sha256-tAZ13BHmfteiyply1ftKqhwlBUVmwBuTRJqH23oio1k=" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/gh/ParveenBhadooOfficial/BhadooJS@1.0.12/vendor/jquery/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script>
         var hash = '<?php echo $hash ?>';
         function submitPayuForm() {
@@ -29,6 +30,23 @@ include("config.php");
           var payuForm = document.forms.payuForm;
           payuForm.submit();
         }
+        //Mobile Validation
+        function check()
+        {
+
+            var pass1 = document.getElementById('mobile');
+
+
+            var message = document.getElementById('message');
+
+           var goodColor = "#0C6";
+            var badColor = "#FF9B37";
+
+            if(mobile.value.length!=10){
+                mobile.style.backgroundColor = badColor;
+                message.style.color = badColor;
+                message.innerHTML = "Invalid Mobile Number, 10 Digit Number Required."
+            }}
     </script>
 </head>
 <body onload="submitPayuForm()">
@@ -68,7 +86,8 @@ include("config.php");
                 
                 <div class="wrap-input100">
                     <span class="label-input100">PHONE</span>
-                    <input type="number" pattern=".{10,}" class="input100" name="phone" value="<?php echo (empty($posted['phone'])) ? '' : $posted['phone']; ?>" placeholder="Phone" maxlength="10" required>
+                    <input type="number" id="mobile" class="input100" name="phone" value="<?php echo (empty($posted['phone'])) ? '' : $posted['phone']; ?>" placeholder="Phone" maxlength="10" required onkeyup="check(); return false;">
+                    <span id="message"></span>
                 </div>
 
                 <div class="container-contact100-form-btn">
@@ -84,7 +103,6 @@ include("config.php");
         </div>
     </div>
     <div id="dropDownSelect1"></div>
-    <script src="https://cdn.jsdelivr.net/gh/ParveenBhadooOfficial/BhadooJS@1.0.12/vendor/jquery/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/gh/ParveenBhadooOfficial/BhadooJS@1.0.12/vendor/bootstrap/js/popper.min.js" integrity="sha256-UpLmd/5xLICGNBTp5z82eNhtQJ91E5K2gDtwqUn8EBc=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/gh/ParveenBhadooOfficial/BhadooJS@1.0.12/vendor/bootstrap/js/bootstrap.min.js" integrity="sha256-DiWJXXyq81WlPRnDfGmgYZj2aOVCKyEdJ1l+2TmDuAs=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/gh/ParveenBhadooOfficial/BhadooJS@1.0.12/vendor/select2/select2.min.js" integrity="sha256-+mWd/G69S4qtgPowSELIeVAv7+FuL871WXaolgXnrwQ=" crossorigin="anonymous"></script>
