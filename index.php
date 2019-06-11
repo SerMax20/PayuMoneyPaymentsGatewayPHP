@@ -59,7 +59,7 @@ include("config.php");
 
                 <div class="wrap-input100">
                     <span class="label-input100">EMAIL</span>
-                    <input class="input100" name="email" value="<?php echo (empty($posted['email'])) ? '' : $posted['email']; ?>" placeholder="Email" required>
+                    <input type="email" class="input100" name="email" value="<?php echo (empty($posted['email'])) ? '' : $posted['email']; ?>" placeholder="Email" required>
                     <input type="hidden" class="input100" name="productinfo" value="CUSTOMPAY" required>
                     <input type="hidden"  name="surl" value="<?php echo 'https://' . $_SERVER['HTTP_HOST'] . '/success/' ?>" size="64" />
                     <input type="hidden" name="furl" value="<?php echo 'https://' . $_SERVER['HTTP_HOST'] . '/failed/' ?>" size="64" />
@@ -68,7 +68,7 @@ include("config.php");
                 
                 <div class="wrap-input100">
                     <span class="label-input100">PHONE</span>
-                    <input class="input100" name="phone" value="<?php echo (empty($posted['phone'])) ? '' : $posted['phone']; ?>" placeholder="Phone" required>
+                    <input type="number" pattern=".{10,}" class="input100" name="phone" value="<?php echo (empty($posted['phone'])) ? '' : $posted['phone']; ?>" placeholder="Phone" maxlength="10" required>
                 </div>
 
                 <div class="container-contact100-form-btn">
