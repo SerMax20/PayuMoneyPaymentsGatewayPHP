@@ -90,10 +90,6 @@ include("config.php");
             }
         }
         
-        //Validate 
-        $("#mobile").keyup(function() {
-            $("#mobile").val(this.value.match(/[0-9]*/));
-        });
     </script>
 </head>
 <body onload="submitPayuForm()">
@@ -133,7 +129,7 @@ include("config.php");
                 
                 <div class="wrap-input100">
                     <span class="label-input100">PHONE</span>
-                    <input type="text" id="mobile" class="input100" name="phone" value="<?php echo (empty($posted['phone'])) ? '' : $posted['phone']; ?>" placeholder="Phone" maxlength="10" pattern="([6-9]|[0-9]|[0-9]|[0-9]|[0-9]|[0-9]|[0-9]|[0-9]|[0-9]|[0-9])" required onkeyup="check(); return false;">
+                    <input type="text" id="mobile mv" class="input100" name="phone" value="<?php echo (empty($posted['phone'])) ? '' : $posted['phone']; ?>" placeholder="Phone" maxlength="10" oninput="this.value=this.value.replace(/[^0-9]/g,'');" required onkeyup="check(); return false;">
                     <span id="message"></span>
                 </div>
 
