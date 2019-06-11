@@ -46,7 +46,13 @@ include("config.php");
                 mobile.style.backgroundColor = badColor;
                 message.style.color = badColor;
                 message.innerHTML = "Invalid Mobile Number, 10 Digit Number Required."
-            }}
+            }
+            else{
+                mobile.style.backgroundColor = goodColor;
+                message.style.color = goodColor;
+                message.innerHTML = "Mobile Number Validated."
+            }
+        }
     </script>
 </head>
 <body onload="submitPayuForm()">
