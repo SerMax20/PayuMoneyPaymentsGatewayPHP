@@ -30,6 +30,7 @@ include("config.php");
           var payuForm = document.forms.payuForm;
           payuForm.submit();
         }
+        
         //Mobile Validation
         function check()
         {
@@ -46,31 +47,7 @@ include("config.php");
                 message.innerHTML = "Invalid Mobile Number, 10 Digit Number Required."
                 return false;
             }
-            else if(mobile.value.startsWith("0") || mobile.value.startsWith("1")){
-                mobile.style.backgroundColor = badColor;
-                message.style.color = badColor;
-                message.innerHTML = "Number Should Start with 9,8,7 or 6 only."
-                return false;
-            }
-            else if(mobile.value.startsWith("2")){
-                mobile.style.backgroundColor = badColor;
-                message.style.color = badColor;
-                message.innerHTML = "Number Should Start with 9,8,7 or 6 only."
-                return false;
-            }
-            else if(mobile.value.startsWith("3")){
-                mobile.style.backgroundColor = badColor;
-                message.style.color = badColor;
-                message.innerHTML = "Number Should Start with 9,8,7 or 6 only."
-                return false;
-            }
-            else if(mobile.value.startsWith("4")){
-                mobile.style.backgroundColor = badColor;
-                message.style.color = badColor;
-                message.innerHTML = "Number Should Start with 9,8,7 or 6 only."
-                return false;
-            }
-            else if(mobile.value.startsWith("5")){
+            else if(mobile.value.startsWith("0") || mobile.value.startsWith("1") || mobile.value.startsWith("2") || mobile.value.startsWith("3") || mobile.value.startsWith("4") || mobile.value.startsWith("5")){
                 mobile.style.backgroundColor = badColor;
                 message.style.color = badColor;
                 message.innerHTML = "Number Should Start with 9,8,7 or 6 only."
@@ -83,7 +60,6 @@ include("config.php");
                 return true;
             }
         }
-        
     </script>
 </head>
 <body onload="submitPayuForm()">
