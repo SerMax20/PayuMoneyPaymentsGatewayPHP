@@ -35,8 +35,6 @@ include("config.php");
         {
 
             var pass1 = document.getElementById('mobile');
-
-
             var message = document.getElementById('message');
 
            var goodColor = "#0C6";
@@ -46,41 +44,49 @@ include("config.php");
                 mobile.style.backgroundColor = badColor;
                 message.style.color = badColor;
                 message.innerHTML = "Invalid Mobile Number, 10 Digit Number Required."
+                return false;
             }
             else if(mobile.value.startsWith("0")){
                 mobile.style.backgroundColor = badColor;
                 message.style.color = badColor;
-                message.innerHTML = "Invalid Mobile Number, 10 Digit Number Required."
+                message.innerHTML = "Number Should Start with 9,8,7 or 6 only."
+                return false;
             }
             else if(mobile.value.startsWith("1")){
                 mobile.style.backgroundColor = badColor;
                 message.style.color = badColor;
-                message.innerHTML = "Invalid Mobile Number, 10 Digit Number Required."
+                message.innerHTML = "Number Should Start with 9,8,7 or 6 only."
+                return false;
             }
             else if(mobile.value.startsWith("2")){
                 mobile.style.backgroundColor = badColor;
                 message.style.color = badColor;
-                message.innerHTML = "Invalid Mobile Number, 10 Digit Number Required."
+                message.innerHTML = "Number Should Start with 9,8,7 or 6 only."
+                return false;
             }
             else if(mobile.value.startsWith("3")){
                 mobile.style.backgroundColor = badColor;
                 message.style.color = badColor;
-                message.innerHTML = "Invalid Mobile Number, 10 Digit Number Required."
+                message.innerHTML = "Number Should Start with 9,8,7 or 6 only."
+                return false;
             }
             else if(mobile.value.startsWith("4")){
                 mobile.style.backgroundColor = badColor;
                 message.style.color = badColor;
-                message.innerHTML = "Invalid Mobile Number, 10 Digit Number Required."
+                message.innerHTML = "Number Should Start with 9,8,7 or 6 only."
+                return false;
             }
             else if(mobile.value.startsWith("5")){
                 mobile.style.backgroundColor = badColor;
                 message.style.color = badColor;
-                message.innerHTML = "Invalid Mobile Number, 10 Digit Number Required."
+                message.innerHTML = "Number Should Start with 9,8,7 or 6 only."
+                return false;
             }
             else{
                 mobile.style.backgroundColor = goodColor;
                 message.style.color = goodColor;
                 message.innerHTML = "Mobile Number Validated."
+                return true;
             }
         }
     </script>
